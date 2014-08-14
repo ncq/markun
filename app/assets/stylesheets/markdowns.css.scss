@@ -1,3 +1,30 @@
-// Place all the styles related to the Markdowns controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#preview_box {
+    @mixin content($height) {
+        .content {
+            width: 100%;
+            height: $height;
+            padding: 0px;
+        }
+    }
+    @mixin column($side) {
+        @include content(400px);
+        width: 49%;
+        float: $side;
+    }
+    .left_column  {
+        @include column(left);
+    }
+    .right_column {
+        @include column(right);
+    }
+    .single_column {
+        width: 100%;
+        @include content(15px);
+    }
+    .clear {
+        clear: both;
+    }
+    .border {
+        border: 1px solid #000;
+    }
+}

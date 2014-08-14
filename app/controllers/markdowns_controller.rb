@@ -62,11 +62,8 @@ class MarkdownsController < ApplicationController
   end
 
 
-
   def preview_api
-    content = markdown_params[:content]
-    
-    @preview = content
+    @preview = Markdown.new(markdown_params.tapp).tapp.preview
   end
 
   private
