@@ -1,5 +1,5 @@
+# -*- coding: utf-8 -*-
 source 'https://rubygems.org'
-
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
@@ -36,3 +36,22 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+
+
+
+
+# ==========================================
+# 便利ジェム
+# ==========================================
+group :development do
+  gem 'guard-livereload' # ブラウザ自動リロード
+  gem 'pry-rails' # Railsでpry利用する
+  gem 'pry-doc' # C拡張ひける
+  gem 'pry-debugger'  # pryのデバグ機能を拡張する
+  gem 'better_errors' # エラー画面を見やすくする
+  gem 'binding_of_caller' # エラー画面を見やすくする
+  gem 'thin' # weblickより速い気がするwebサーバ
+end
+
+gem 'tapp' # object.tappでppしつつレシーバを返す
+gem 'awesome_print' # ap objectでいい感じに出力
