@@ -60,7 +60,7 @@ gem 'awesome_print' # ap objectでいい感じに出力
 # 追加するでー
 # ==========================================
 gem "mongoid"
-gem "twitter-bootstrap-rails", '2.2.8'  # bootstrap2使いましょうかね
+gem "twitter-bootstrap-rails"
 gem "less-rails"
 gem "therubyracer"
 gem 'redcarpet'
