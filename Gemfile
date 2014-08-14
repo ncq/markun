@@ -56,6 +56,41 @@ end
 gem 'tapp' # object.tappでppしつつレシーバを返す
 gem 'awesome_print' # ap objectでいい感じに出力
 
+
+
+# ==========================================
+# テスト用のgemだ
+# ==========================================
+group :test do
+  gem 'database_cleaner' # テスト終了時にテスト用DBを掃除してくれる
+  gem 'capybara' # ブラウザ操作
+  gem 'poltergeist' # cappybaraのドライバ(PhantomJS)
+  gem 'selenium-webdriver', :require => false # cappybaraのドライバ(firefox,chrome,safari,etc)
+  gem 'capybara-webkit' # cappybaraのドライバ(QtWebkitに直アクセス)
+  gem 'launchy' # capybaraのsave_and_open_pageメソッド(スクリーンショットを取る)で必要
+  # gem 'simplecov', :require => false # カバレッジ(CO)の測定
+  # gem 'webmock' # web_api用のmock
+  # gem 'vcr' # web_apiのレスポンスをキャッシュしておき2回目以降はローカルのデータをmockとして使用
+
+  gem 'timecop' # 現在時刻の操作
+end
+
+# rakeやrails generate等のコマンドを使用するため、test環境だけでなくdevelopment環境でも使えるようにしておく
+group :development, :test do
+  # gem "rspec-rails" # rspecをrailsで使うためのgem
+	gem 'factory_girl_rails' # テストデータを作成する。デフォルトのfixtureよりも使いやすい
+  gem 'faker' # テスト用のサンプルデータを生成してくれる
+
+  # gem 'guard-rspec' # ファイルを変更した際に自動テストを実行
+  gem 'guard-minitest' # ファイルを変更した際に自動テストを実行
+  gem 'rb-fsevent' # ファイルの変更を検知。guard-rspec用
+  gem 'growl' # テスト結果をgrowlで通知する
+end
+
+
+
+
+
 # ==========================================
 # 追加するでー
 # ==========================================
