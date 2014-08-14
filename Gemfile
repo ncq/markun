@@ -71,6 +71,7 @@ group :test do
   # gem 'simplecov', :require => false # カバレッジ(CO)の測定
   # gem 'webmock' # web_api用のmock
   # gem 'vcr' # web_apiのレスポンスをキャッシュしておき2回目以降はローカルのデータをmockとして使用
+  gem 'minitest-spec-rails' # minitestでrspec風に書ける
 
   gem 'timecop' # 現在時刻の操作
 end

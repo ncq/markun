@@ -1,7 +1,12 @@
+# -*- coding: utf-8 -*-
 require 'test_helper'
 
 class MarkdownTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  describe Markdown do
+    describe '#preview' do
+      it "trueを返す" do
+        assert(true)
+      end
+    end
+  end
 end
