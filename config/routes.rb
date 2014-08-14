@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post 'markdowns/preview_api'
   resources :markdowns
 
   # The priority is based upon order of creation: first created -> highest priority.

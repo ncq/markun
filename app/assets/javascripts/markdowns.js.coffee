@@ -1,3 +1,12 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+$ ->
+  $('#markdown_content').keyup ->
+    $.ajax
+      url: '/markdowns/preview_api'
+      type: 'POST'
+      data:
+        markdown:
+          content: $(this).val()
+      success: (data) ->
+        eval data
+      error: ->
+        console.log 'error'

@@ -61,6 +61,14 @@ class MarkdownsController < ApplicationController
     end
   end
 
+
+
+  def preview_api
+    content = markdown_params[:content]
+    
+    @preview = content
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_markdown
