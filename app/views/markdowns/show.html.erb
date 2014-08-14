@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @markdown.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @markdown.content %>
+</p>
+
+<%= link_to 'Edit', edit_markdown_path(@markdown) %> |
+<%= link_to 'Back', markdowns_path %>

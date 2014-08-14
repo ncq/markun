@@ -1,0 +1,27 @@
+<h1>Listing markdowns</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @markdowns.each do |markdown| %>
+      <tr>
+        <td><%= markdown.title %></td>
+        <td><%= markdown.content %></td>
+        <td><%= link_to 'Show', markdown %></td>
+        <td><%= link_to 'Edit', edit_markdown_path(markdown) %></td>
+        <td><%= link_to 'Destroy', markdown, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Markdown', new_markdown_path %>
