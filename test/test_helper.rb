@@ -5,6 +5,7 @@ require 'minitest/spec'
 require 'minitest/autorun'
 require "capybara/rails"
 require 'capybara'
+require 'capybara/poltergeist'
 
 class ActiveSupport::TestCase
 

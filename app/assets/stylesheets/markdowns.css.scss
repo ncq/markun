@@ -7,7 +7,7 @@
         }
     }
     @mixin column($side) {
-        @include content(600px);
+        @include content(550px);
         width: 49%;
         float: $side;
     }
