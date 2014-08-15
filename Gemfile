@@ -51,6 +51,7 @@ group :development do
   gem 'better_errors' # エラー画面を見やすくする
   gem 'binding_of_caller' # エラー画面を見やすくする
   gem 'thin' # weblickより速い気がするwebサーバ
+  gem 'quiet_assets' # assetのログは鬱陶しいよね
 end
 
 gem 'tapp' # object.tappでppしつつレシーバを返す
@@ -100,3 +101,4 @@ gem "twitter-bootstrap-rails"
 gem "less-rails"
 gem "therubyracer"
 gem 'redcarpet'
+gem 'bcrypt-ruby', '3.1.2' # これよりまでだとBCrypt::Engine#costが存在しないのでこれで

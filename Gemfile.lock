@@ -30,6 +30,7 @@ GEM
     addressable (2.3.6)
     arel (5.0.1.20140414130214)
     awesome_print (1.2.0)
+    bcrypt-ruby (3.1.2)
     better_errors (1.1.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -165,6 +166,8 @@ GEM
       yard (~> 0.8)
     pry-rails (0.3.2)
       pry (>= 0.9.10)
+    quiet_assets (1.0.3)
+      railties (>= 3.1, < 5.0)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -254,6 +257,7 @@ PLATFORMS
 
 DEPENDENCIES
   awesome_print
+  bcrypt-ruby (= 3.1.2)
   better_errors
   binding_of_caller
   capybara
@@ -275,6 +279,7 @@ DEPENDENCIES
   pry-debugger
   pry-doc
   pry-rails
+  quiet_assets
   rails (= 4.1.4)
   rb-fsevent
   redcarpet

@@ -13,8 +13,7 @@ $ ->
 
   $('#markdown_content').keyup post_preview_api
 
-  # ひどい...
-  if $('#preview_box') instanceof($)
+  if $('#preview_box')[0]
     post_preview_api()
 
 

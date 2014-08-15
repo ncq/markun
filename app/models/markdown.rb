@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 class Markdown
   include Mongoid::Document
+  include Mongoid::Timestamps
 
-  field :title, type: String
-  field :content, type: String
+  field :title
+  field :content
 
   def preview
     markdown = Redcarpet::Markdown.new Redcarpet::Render::HTML, \
@@ -12,6 +13,6 @@ class Markdown
       tables: true
 
     # TODO: gsubは微妙...他にまともなやり方ありそう。
-    markdown.render(content).gsub(/\n/, "").html_safe.tapp
+    markdown.render(content).gsub(/\n/, "").html_safe
   end
 end
